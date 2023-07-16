@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>15 Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div  class="board" id="board"></div> 
+        <div id="info">
+            <div>
+                <label for="size">Select Puzzle Size:</label>
+                <select onchange="updateBoardSize()" id="size">
+                    <option value="3">3x3</option>
+                    <option value="4" selected>4x4</option>
+                    <option value="5">5x5</option>
+                </select>
+                <button onclick="startNewGame()">Start New Game</button>
+                <button onclick="shuffleTiles()">Shuffle</button>
+            </div>
+            <div>
+                <p>Time: <span id="timer">0:00</span></p>
+                <p>Move Count: <span id="moveCount">0</span></p>
+            </div>
+            <div id="leaderboard"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
